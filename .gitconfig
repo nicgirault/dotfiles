@@ -1,0 +1,22 @@
+[user]
+	email = nic.girault@gmail.com
+	name = nicgirault
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	lg = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	oops = !git add -p && git commit --amend && git push --force
+	br-delete = branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
+	brd = branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
+[core]
+	editor = vim
+[push]
+	default = current
+[pull]
+	default = current
+[url "https://"]
+  insteadOf = git://
+[merge]
+  tool = vimdiff
