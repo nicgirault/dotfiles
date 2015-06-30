@@ -1,0 +1,1 @@
+{"*":{"exception-reporting":{"userId":"dfa7f670-c1a7-238e-504b-0c02caf3a9b7"},"welcome":{"showOnStartup":false},"editor":{"fontSize":25}},"linter-python-pep8":{"pep8DirToExecutable":"/usr/local/bin/","ignoreErrorCodes":"E501, W292"},"linter-flake8":{"executableDir":"/usr/local/bin/"}}
