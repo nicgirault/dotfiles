@@ -1,3 +1,4 @@
+#tmux
 # Set up the prompt
 
 autoload -Uz promptinit
@@ -36,9 +37,24 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
+export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
+export TERM=xterm-256color
+[ -n "$TMUX" ] && export TERM=screen-256color
+setopt interactivecomments
+
+source ~/.z.sh
+source ~/.zsh/antigen.zsh
+source ~/.zsh/pure.zsh
+
+antigen use oh-my-zsh
+antigen bundle command-not-found
+antigen bundle git
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
+#antigen bundle swirepe/alwaysontop
+antigen apply
 
 #custom
 alias ll='ls -lah'
-alias dcp='docker-compose'
 source ~/.tmux.conf
-source ~/.z.sh
+alias git-brd='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'

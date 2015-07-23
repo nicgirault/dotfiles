@@ -17,12 +17,14 @@ sudo pip install flake8
 # download and install atom on https://atom.io/
 apm install language-cjsx
 apm install language-jade
+apm install linter
 apm install linter-flake8
 apm install linter-python-pep8
 
 sudo apt-get install zsh
 rm ~/.zshrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
+ln -s ~/dotfiles/zsh ~/.zsh
 
 # bash
 rm ~/.bashrc
@@ -33,7 +35,16 @@ sudo apt-get install tmux
 rm ~/.tmux.conf
 ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
+chsh -s $(which zsh)
+
 # git options
 rm ~/.gitconfig
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+
+sudo apt-get install npm
+sudo npm install -g bower
+sudo npm install -g gulp
+
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+sudo pip install virtualenv
 
