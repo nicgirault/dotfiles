@@ -1,14 +1,9 @@
-#tmux
 # Set up the prompt
-
 autoload -Uz promptinit
 promptinit
 prompt adam1
 
 setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -37,24 +32,30 @@ zstyle ':completion:*' verbose true
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
-export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
+#export PATH=$HOME/bin:/usr/local/bin:/usr/bin:$PATH
 export TERM=xterm-256color
-[ -n "$TMUX" ] && export TERM=screen-256color
+#[ -n "$TMUX" ] && export TERM=screen-256color
 setopt interactivecomments
 
-source ~/.z.sh
 source ~/.zsh/antigen.zsh
-source ~/.zsh/pure.zsh
+source antigen/antigen.zsh
 
 antigen use oh-my-zsh
-antigen bundle command-not-found
-antigen bundle git
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-history-substring-search
-#antigen bundle swirepe/alwaysontop
+antigen bundles <<EOBUNDLES
+
+git
+z
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-history-substring-search
+command-not-found
+
+EOBUNDLES
+
+# Theme
+antigen theme https://gist.github.com/agnoster/3712874 agnoster
 antigen apply
+
+source .zsh/pure-custom.zsh
 
 #custom
 alias ll='ls -lah'
-source ~/.tmux.conf
-alias git-brd='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
