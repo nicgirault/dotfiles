@@ -38,7 +38,7 @@ export TERM=xterm-256color
 setopt interactivecomments
 
 source ~/.zsh/antigen.zsh
-source antigen/antigen.zsh
+source ~/.antigen/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES
@@ -55,7 +55,7 @@ EOBUNDLES
 antigen theme https://gist.github.com/agnoster/3712874 agnoster
 antigen apply
 
-source .zsh/pure-custom.zsh
+source ~/.zsh/pure-custom.zsh
 
 #custom
 alias ll='ls -lah'
