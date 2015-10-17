@@ -38,7 +38,7 @@ export TERM=xterm-256color
 setopt interactivecomments
 
 source ~/.zsh/antigen.zsh
-source ~/.antigen/antigen.zsh
+source ~/dotfiles/antigen.zsh
 
 antigen use oh-my-zsh
 antigen bundles <<EOBUNDLES

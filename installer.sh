@@ -17,6 +17,8 @@ chmod +x ~/dotfiles/fonts/installer.sh
 rm ~/.gitconfig
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
+curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/dotfiles/antigen.zsh
+
 # change default shell
 chsh -s $(which zsh)
 
