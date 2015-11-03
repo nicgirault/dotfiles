@@ -10,7 +10,7 @@ ln -s ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # install fonts for agnoster zsh theme
 git clone git@github.com:powerline/fonts.git ~/dotfiles/fonts
-chmod +x ~/dotfiles/fonts/installer.sh
+chmod +x ~/dotfiles/fonts/install.sh
 ~/dotfiles/fonts/install.sh
 
 # git options
