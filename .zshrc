@@ -37,7 +37,6 @@ export TERM=xterm-256color
 #[ -n "$TMUX" ] && export TERM=screen-256color
 setopt interactivecomments
 
-source ~/.zsh/antigen.zsh
 source ~/dotfiles/antigen.zsh
 
 antigen use oh-my-zsh
@@ -54,8 +53,6 @@ EOBUNDLES
 # Theme
 antigen theme https://gist.github.com/agnoster/3712874 agnoster
 antigen apply
-
-source ~/.zsh/pure-custom.zsh
 
 #custom
 alias ll='ls -lah'
