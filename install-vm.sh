@@ -5,14 +5,12 @@ EOF
 
 rm ~/.zshrc
 ln -s ~/dotfiles/.zshrc ~/.zshrc
-rm -rf ~/.zsh
-ln -s ~/dotfiles/zsh ~/.zsh
 
 # git options
 rm ~/.gitconfig
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 
-curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/dotfiles/antigen.zsh
+ls ~/dotfiles/antigen.zsh || (curl -L https://raw.githubusercontent.com/zsh-users/antigen/master/antigen.zsh > ~/dotfiles/antigen.zsh)
 
 # change default shell
 chsh -s $(which zsh)
