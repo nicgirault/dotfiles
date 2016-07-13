@@ -16,4 +16,5 @@ linter
 linter-flake8
 linter-python-pep8
 file-icons
+tablr
 EOF
