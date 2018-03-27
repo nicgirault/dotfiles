@@ -27,3 +27,5 @@ My command line productivity tools
 - tmux
 - z
 - agnoster theme
+
+brew install fzf
