@@ -8,7 +8,7 @@
 	br = branch
 	lg = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	oops = !git add -p && git commit --amend && git push --force
-	clean-branches = branch --merged | grep -v \"\\*\" | xargs -n 1 git branch -d
+	ff = !git fetch origin --prune && git branch --merged origin/master | grep -v 'master$' | xargs git branch -d
 [core]
 	editor = vim
 [push]
